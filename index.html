@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="response.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <title>Newsletter</title>
+</head>
+<body>
+    
+     <div class="container">
+        <div class="mobile">
+            <img src="images/illustration-sign-up-mobile.svg" alt="" class="">
+        </div>
+        <div class="middle">
+    <form action="alert.html" method="get">
+        
+            <div class="text">
+            <div class="discribe">
+                    <h2>Stay updated!</h2>
+                    <p>
+                        Join 60,000+ product managers receiving monthly updates on:
+                    </p>
+                <ul>
+                    <li>Product discovery and buiding what matters</li>
+                    <li>Measuring to ensure updated are a success</li>
+                    <li>And much more!</li>
+                </ul> 
+            </div> 
+            <div class="fill">
+
+            <label class="" >
+                <span class="emailAlert"></span>
+                <input class="emailBox" type="email" name="email" id="email" placeholder="email@company.com">
+                </label>
+
+                     <button id="subscribe" onclick="validEmail()" type="submit" value="button">
+                         Subscribe to monthly newsletter</button>               
+<!-- 
+                <label for="email" >E-mail address<span id="valid"> valid mail required</span>
+                    <input class="verify" type="email" name="email" id="email" placeholder="email@company.com"><br>
+                </label>
+                    <a href="alert.html"> <button id="subscribe" onclick="subscribe" type="button" value="button">
+                         Subscribe to monthly newsletter</button></a> -->
+            </div>
+    </form>        
+        </div>
+            <div class="image desktop">
+           <img src="images/illustration-sign-up-desktop.svg" alt="" class="img-svg">
+            </div>
+        </div>
+        
+    </div>
+     </div> 
+    <script>
+        const email = document.getElementById("email");
+
+        email.addEventListener("input",()=>{
+            const emailBox = document.querySelector(".emailBox");
+            const emailAlert = document.querySelector(".emailAlert");
+            const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
+
+            if(email.value.match(emailPattern)){
+                emailBox.classList.add("valid");
+                emailBox.classList.remove("invalid");
+                emailAlert.innerHTML = "Valid mail";
+            localStorage.setItem("textvalue",emailBox.value);
+                emailAlert.style.color ="#0f0";
+                emailAlert.style.marginLeft= "240px";
+            }else if(email.value ==="" )
+            {
+                        
+         } else {
+                emailBox.classList.add("invalid");
+                emailBox.classList.remove("valid");
+                emailAlert.innerHTML = "Valid mail required";
+                emailAlert.style.color ="#f00";
+                emailAlert.style.marginLeft= "185px";
+        
+            }
+            
+        });
+
+        // function validEmail(){
+        //     var email = document.getElementById("email").value;
+            
+        // }
+       
+    </script>
+</body>
+</html>
