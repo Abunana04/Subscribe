@@ -8,7 +8,7 @@ mail verification
   - Links
   - My process
     - Built with
-      - What I learned
+    - What I learned
   - Continued development
   - 
 - Author
@@ -39,8 +39,6 @@ Users can be able to:
 ![](/design/mobile-alert.jpg)
 
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
